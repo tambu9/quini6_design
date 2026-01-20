@@ -1,1 +1,174 @@
-
+{
+  "metadata": {
+    "name": "Quini6_App_Tokens",
+    "version": "1.0.0",
+    "description": "Tokens de diseño para app Quini6 (español) — paleta, tipografía, espaciados y componentes básicos",
+    "platform": "iOS",
+    "created": "01/20/2026"
+  },
+  "colors": {
+    "accent_primary": { "value": "#156273", "comment": "Azul petróleo - botones primarios" },
+    "accent_secondary": { "value": "#2FA26F", "comment": "Verde suave - success / 6 aciertos" },
+    "neutral_bg": { "value": "#F7F9FB", "comment": "Fondo general" },
+    "card_bg": { "value": "#FFFFFF", "comment": "Fondo de tarjetas" },
+    "text_primary": { "value": "#0F1724", "comment": "Texto principal" },
+    "text_secondary": { "value": "#6B7280", "comment": "Texto secundario / hints" },
+    "border": { "value": "#E6EEF2", "comment": "Bordes y separadores" },
+    "alert_3": { "value": "#F59E0B", "comment": "Amarillo - 3 aciertos" },
+    "alert_4": { "value": "#F97316", "comment": "Naranja - 4 aciertos" },
+    "alert_5": { "value": "#EF4444", "comment": "Rojo - 5 aciertos" },
+    "shadow": { "value": "rgba(6,30,42,0.06)", "comment": "Sombra sutil para cards" },
+    "chip_bg": { "value": "#FFFFFF", "comment": "Fondo chip normal" },
+    "chip_bg_disabled": { "value": "#F3F4F6", "comment": "Chip deshabilitado" },
+    "chip_match_bg": { "value": "#E6FFEF", "comment": "Chip acierto background" },
+    "chip_match_border": { "value": "#2FA26F", "comment": "Chip acierto border" }
+  },
+  "typography": {
+    "font_family_system": { "value": "San Francisco (SF Pro Text / SF Pro Display)", "comment": "Fuente sistema iOS" },
+    "h1": { "size": 20, "weight": 600, "lineHeight": 24, "comment": "H1 Semibold" },
+    "h2": { "size": 17, "weight": 500, "lineHeight": 22, "comment": "H2 Medium" },
+    "body": { "size": 15, "weight": 400, "lineHeight": 20, "comment": "Texto principal" },
+    "small": { "size": 13, "weight": 400, "lineHeight": 18, "comment": "Texto secundario" },
+    "micro": { "size": 11, "weight": 400, "lineHeight": 14, "comment": "Microcopy" }
+  },
+  "spacing": {
+    "space_4": 4,
+    "space_8": 8,
+    "space_12": 12,
+    "space_16": 16,
+    "space_24": 24,
+    "space_32": 32,
+    "space_48": 48
+  },
+  "sizes": {
+    "touch_min": { "width": 44, "height": 44, "unit": "px" },
+    "fab": { "width": 56, "height": 56, "unit": "px" },
+    "chip_normal": { "width": 40, "height": 40, "unit": "px" },
+    "chip_large": { "width": 60, "height": 60, "unit": "px" },
+    "chip_small": { "width": 24, "height": 24, "unit": "px" },
+    "button_height": 48
+  },
+  "radii": {
+    "radius_small": 8,
+    "radius_card": 12,
+    "radius_round": 999
+  },
+  "shadows": {
+    "card": { "color": "rgba(6,30,42,0.06)", "offset_x": 0, "offset_y": 2, "blur": 8, "spread": 0 }
+  },
+  "components": {
+    "button_primary": {
+      "background": "{colors.accent_primary.value}",
+      "text_color": "#FFFFFF",
+      "height": "{sizes.button_height}",
+      "radius": "{radii.radius_small}",
+      "padding_h": 20,
+      "font": "{typography.body}",
+      "shadow": "none"
+    },
+    "button_secondary": {
+      "background": "transparent",
+      "border_color": "{colors.accent_primary.value}",
+      "text_color": "{colors.accent_primary.value}",
+      "height": "{sizes.button_height}",
+      "radius": "{radii.radius_small}",
+      "font": "{typography.body}"
+    },
+    "button_destructive": {
+      "background": "{colors.alert_5.value}",
+      "text_color": "#FFFFFF",
+      "height": "{sizes.button_height}",
+      "radius": "{radii.radius_small}",
+      "font": "{typography.body}"
+    },
+    "fab": {
+      "size": "{sizes.fab}",
+      "background": "{colors.accent_secondary.value}",
+      "icon_color": "#FFFFFF",
+      "shadow": "{shadows.card}"
+    },
+    "card": {
+      "background": "{colors.card_bg.value}",
+      "padding": "{spacing.space_16}",
+      "radius": "{radii.radius_card}",
+      "shadow": "{shadows.card}"
+    },
+    "chip": {
+      "normal": {
+        "size": "{sizes.chip_normal}",
+        "background": "{colors.chip_bg.value}",
+        "border": "{colors.border.value}",
+        "text_style": "{typography.body}"
+      },
+      "large": {
+        "size": "{sizes.chip_large}",
+        "background": "{colors.chip_bg.value}",
+        "border": "{colors.border.value}",
+        "text_style": "{typography.h2}"
+      },
+      "small": {
+        "size": "{sizes.chip_small}",
+        "background": "{colors.chip_bg.value}",
+        "border": "{colors.border.value}",
+        "text_style": "{typography.micro}"
+      },
+      "match": {
+        "background": "{colors.chip_match_bg.value}",
+        "border": "{colors.chip_match_border.value}",
+        "icon": "check",
+        "text_style": "{typography.h2}"
+      },
+      "disabled": {
+        "background": "{colors.chip_bg_disabled.value}",
+        "border": "{colors.border.value}",
+        "text_style": "{typography.body}"
+      },
+      "error": {
+        "background": "#FFF5F5",
+        "border": "{colors.alert_5.value}",
+        "text_style": "{typography.body}"
+      }
+    },
+    "badge": {
+      "3": { "background": "{colors.alert_3.value}", "text_color": "#0F1724", "font": "{typography.small}" },
+      "4": { "background": "{colors.alert_4.value}", "text_color": "#FFFFFF", "font": "{typography.small}" },
+      "5": { "background": "{colors.alert_5.value}", "text_color": "#FFFFFF", "font": "{typography.small}" },
+      "6": { "background": "{colors.accent_secondary.value}", "text_color": "#FFFFFF", "font": "{typography.small}" },
+      "default": { "background": "{colors.border.value}", "text_color": "{colors.text_primary.value}", "font": "{typography.small}" }
+    },
+    "input": {
+      "height": 48,
+      "background": "#FFFFFF",
+      "border": "{colors.border.value}",
+      "radius": 10,
+      "padding_h": 12,
+      "font": "{typography.body}",
+      "placeholder_color": "{colors.text_secondary.value}",
+      "error_color": "{colors.alert_5.value}"
+    },
+    "toggle": {
+      "width": 52,
+      "height": 32,
+      "track_off": "#E5E7EB",
+      "track_on": "{colors.accent_primary.value}",
+      "thumb": "#FFFFFF"
+    },
+    "segmented_control": {
+      "background": "{colors.card_bg.value}",
+      "selected_bg": "{colors.accent_primary.value}",
+      "selected_text": "#FFFFFF",
+      "unselected_text": "{colors.text_secondary.value}",
+      "radius": "{radii.radius_card}"
+    },
+    "modal": {
+      "background": "{colors.card_bg.value}",
+      "radius": 12,
+      "overlay": "rgba(0,0,0,0.4)",
+      "width": 320
+    }
+  },
+  "tokens_notes": {
+    "usage": "Reemplazar referencias entre llaves al importar (por ejemplo {colors.accent_primary.value}). Ajustar unidades a pts si es necesario en iOS.",
+    "storage_recommendation": "Guardar estos tokens en el repositorio de diseño; sincronizar con Figma Tokens plugin o herramienta similar."
+  }
+}
